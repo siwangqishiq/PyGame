@@ -6,7 +6,7 @@ def main():
 	pygame.init()
 	
 	speed = [2 , 2]
-	black = 255 ,255 ,255
+	white = 255 ,255 ,255
 	
 	width = 320
 	height = 240
@@ -29,6 +29,11 @@ def main():
 		
 		screen.fill((0,0,0))
 		screen.blit(ball, ball_rect)
+		
+		for i in range(width):
+			point = (i,i)
+			screen.set_at(point , (255,0,0))
+			
 		pygame.display.flip()
 		
 		time.sleep(0.01)
