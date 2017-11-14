@@ -15,6 +15,8 @@ def main():
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				sys.exit()
+			elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+				sys.exit()
 			else:
 				game.handle_input(event)
 			
@@ -22,9 +24,7 @@ def main():
 		game.update(screen)
 		pygame.display.flip()
 		
-		time.sleep(0.1)
-	
-	
+		time.sleep(0.01)
 	
 if __name__=="__main__":
 	main()
