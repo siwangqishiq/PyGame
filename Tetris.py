@@ -3,7 +3,7 @@ from GameTeris import Game
 
 def main():
 	COLOR_WHITE = (255,255,255)	
-	
+	COLOR_BLACK = (0,0,0)	
 	pygame.init()
 	screen = pygame.display.set_mode((Game.SCREEN_WIDTH , Game.SCREEN_HEIGHT),0 , 32)
 	pygame.display.set_caption("Tetris Game")
