@@ -1,6 +1,6 @@
 ﻿__all__ = ["Game"]
 
-import sys,pygame,time
+import sys,pygame,time,random
 
 #分数Hub
 class ScoreBanner(object):
@@ -53,6 +53,11 @@ class BaseShape(object):
 	def update(self ,screen):
 		print("render shape")
 		
+class CubeShape(BaseShape):
+	def __init__(self):
+		super.__init(self,(0,0,255))
+	
+		
 				
 #主界面
 class MainView(object):
@@ -61,6 +66,7 @@ class MainView(object):
 	
 	BOUND_COLOR = (0,0,0)
 	NET_COLOR = (204,204,204)
+	
 	def __init__(self , game):
 		self.game = game
 		self.row = 20
